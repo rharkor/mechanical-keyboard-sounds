@@ -1,0 +1,7 @@
+('c:\\users\\louid\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pycparser-2.21-py3.9.egg',
+ None,
+ {'*.pyw', '*.py', '*.pyd', '*.cp39-win_amd64.pyd', 'EGG-INFO', '*.pyc'},
+ 'DATA',
+ [('pycparser\\_c_ast.cfg',
+   'c:\\users\\louid\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pycparser-2.21-py3.9.egg\\pycparser\\_c_ast.cfg',
+   'DATA')])
