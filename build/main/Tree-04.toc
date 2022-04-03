@@ -1,7 +1,7 @@
-('c:\\users\\louid\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging-21.3-py3.9.egg',
+('c:\\users\\louid\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyparsing-3.0.6-py3.9.egg',
  None,
- {'*.pyw', '*.py', '*.pyd', '*.cp39-win_amd64.pyd', 'EGG-INFO', '*.pyc'},
+ {'EGG-INFO', '*.pyc', '*.cp39-win_amd64.pyd', '*.pyd', '*.py', '*.pyw'},
  'DATA',
- [('packaging\\py.typed',
-   'c:\\users\\louid\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging-21.3-py3.9.egg\\packaging\\py.typed',
+ [('pyparsing\\diagram\\template.jinja2',
+   'c:\\users\\louid\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyparsing-3.0.6-py3.9.egg\\pyparsing\\diagram\\template.jinja2',
    'DATA')])

@@ -1,10 +1,13 @@
+import os
+import sys
+import traceback
 from pynput import keyboard as keyboard_handler
 import pyglet
 from plyer import notification
 
 keyboards = ["alpaca", "blackink", "bluealps", "boxnavy", "buckling", "cream",
             "holypanda", "mxblack", "mxblue", "mxbrown", "redink", "topre", "turquoise"]
-keyboard_num = 5
+keyboard_num = 0
 keyboard = keyboards[keyboard_num]
 
 
@@ -40,7 +43,7 @@ def handle_key_press(key):
 def handle_exit():
     # CTRL + SHIFT + C
     if 162 in keys and keys[162] and 160 in keys and keys[160] and 67 in keys and keys[67]:
-        exit()
+        sys.exit()
 
 
 def handle_next_keyboard():
@@ -58,12 +61,12 @@ def handle_next_keyboard():
             if keyboard_num > len(keyboards) - 1:
                 keyboard_num = 0
             keyboard = keyboards[keyboard_num]
-        notification.notify(
-            title='Son de clavier mis à jour',
-            message='Votre clavier est maintenant ' + keyboard,
-            app_icon=None,  # e.g. 'C:\\icon_32x32.ico'
-            timeout=1,  # seconds
-        )
+        # notification.notify(
+        #     title='Son de clavier mis à jour',
+        #     message='Votre clavier est maintenant ' + keyboard,
+        #     app_icon=None,  # e.g. 'C:\\icon_32x32.ico'
+        #     timeout=1,  # seconds
+        # )
 
 
 def handle_key_relase(key):
@@ -80,7 +83,7 @@ def handle_sound(key_code):
 
         elif key_code == 32 and 'SPACE' in sounds[keyboard]:
             sounds[keyboard]['SPACE'].play()
-        else:
+        elif 'GENERIC_R' + str(key_code % 5) in sounds[keyboard]:
             sounds[keyboard]['GENERIC_R' + str(key_code % 5)].play()
 
 
@@ -98,10 +101,14 @@ def load_sounds():
 
 def load_sound(keyboard, sound_name):
     try:
+        print("loading sound " + sound_name + " for keyboard " + keyboard)
         sounds[keyboard][sound_name] = pyglet.resource.media(
             'assets/audio/' + keyboard + '/press/' + sound_name + '.mp3', streaming=False)
     except Exception:
-        pass
+        traceback.print_exc()
 
 if __name__ == "__main__":
+    working_dir = r"C:\Program Files (x86)\keyboardSim"
+    pyglet.resource.path = [working_dir]
+    pyglet.resource.reindex()
     main()
