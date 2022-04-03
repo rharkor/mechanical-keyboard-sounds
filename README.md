@@ -2,7 +2,7 @@
 
 **Don't forget to authorize the files in windows security (Cause it delete them automatically thinking it's a keylogger)**
 
-**Clone this project in C:\Program Files (x86)\keyboardSim otherwise you can't start script**
+**Clone this project in C:\Program Files (x86)\ and rename the project file with by keyboardSim otherwise you can't start script**
 ## Startup
 
 Windows :
