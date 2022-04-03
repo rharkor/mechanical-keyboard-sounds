@@ -37,7 +37,7 @@ Choose your favorite keyboard (main.py : line 7)
 keyboard_num = HERE_KEYBOARD_NUM
 ```
 
-## Usefulle commands
+## Usefull commands
     
 `CTRL + SHIFT + C`
 > Stop the program
