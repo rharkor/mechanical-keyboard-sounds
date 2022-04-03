@@ -43,7 +43,6 @@ keyboard_num = HERE_KEYBOARD_NUM
 ```
 
 ## Usefull commands
-
 `CTRL + SHIFT + C`
 
 > Stop the program
